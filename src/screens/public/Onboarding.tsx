@@ -1,16 +1,16 @@
-import {View, TouchableOpacity, Text} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {PublicRouteProps} from '../../routes/public/types';
+import {Box, Text, Pressable} from 'native-base';
 
 const Onboarding = () => {
   const {navigate} = useNavigation<PublicRouteProps>();
   return (
-    <View>
-      <TouchableOpacity onPress={() => navigate('Login')}>
+    <Box>
+      <Pressable onPress={() => navigate('Login')}>
         <Text>Onboarding</Text>
-      </TouchableOpacity>
-    </View>
+      </Pressable>
+    </Box>
   );
 };
 
